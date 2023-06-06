@@ -42,14 +42,36 @@ createApp({
                     text: 'Fare sport',
                     done: true,
                 }, 
-            ]
+            ],
+            array1: [],
+            message: "Non ci sono elementi",
         }
     },
     methods:{
-        elementToDo(indexToDo){
-            if(this.array[indexToDo].done === true){
-                console.log(indexToDo + "compito gia fatto");
+        deleteElement(indexArray){
+            this.array.splice(indexArray, 1);
+        },
+
+        addElement(newElement){
+            let object = {
+                text: newElement,
+                done: false,
             }
-        }
+            if(this.array.includes(object)){
+                console.log("Elemento gia inserito");
+            }
+            else{
+                this.array.push(object);
+                console.log(this.array);
+            }
+            
+            
+        },
+
+        consoleLogElement(){
+            console.log(this.message)
+        },
     }
 }).mount("#app");
+
+console.log(this.array1);

@@ -23,7 +23,8 @@ ul{
 }
 
 li{
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
     padding: 1rem .5rem;
     border-bottom: 2px solid gray;
     background-color: rgb(206, 255, 239);
@@ -31,4 +32,8 @@ li{
 
 .toDo{
     text-decoration: line-through;
+}
+
+span{
+    cursor: pointer;
 }
