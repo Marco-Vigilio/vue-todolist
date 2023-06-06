@@ -16,7 +16,7 @@
             <ul>
                 <li v-for="(element, index) in array" v-bind:class="element.done === true ? 'toDo' : '' ">
                     {{element.text}}
-                    <span @click="deleteElement"><i class="fa-regular fa-circle-xmark"></i></span>
+                    <span @click="deleteElement(index)"><i class="fa-regular fa-circle-xmark"></i></span>
                 </li>
             </ul>
         </div>

@@ -59,21 +59,31 @@ createApp({
                 done: false,
             }
             let verify;
+
+            /*
+            if(this.array.includes(object)){
+                console.log("Elemento gia inserito");
+            }
+            else{
+                this.array.push(object);
+                this.element = "";
+            }
+            */
+           
             this.array.forEach(element => {
                 if(element.text === object.text){
-                    console.log("Elemento gia inserito");
+                    alert("Elemento gia inserito");
                     verify = false;
                 }
                 else{
-                    console.log("Nuovo elemento");
                     verify = true;
                 }
             });
             if(verify === true){
                 this.array.push(object);
-                    console.log(this.array);
-                    this.element = "";
+                this.element = "";
             }
+            
         },
 
         consoleLogElement(){
@@ -81,5 +91,3 @@ createApp({
         },
     }
 }).mount("#app");
-
-console.log(this.array1);
