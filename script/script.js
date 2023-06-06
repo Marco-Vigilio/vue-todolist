@@ -43,9 +43,8 @@ createApp({
                     done: true,
                 }, 
             ],
-            array1: [],
             message: "Inserisci una task da fare",
-            element: "",
+            word: "",
         }
     },
     methods:{
@@ -79,7 +78,7 @@ createApp({
                     console.log(element.text.toUpperCase());
                     console.log(object.text.toUpperCase());
                     alert("Elemento gia inserito");
-                    this.element = "";
+                    this.word = "";
                     verifyNewElement = false;
                 }
                 /*
@@ -92,7 +91,7 @@ createApp({
             if(verifyNewElement === true){
                 this.array.push(object);
                 console.log(this.array);
-                this.element = "";
+                this.word = "";
             }
         },
 
