@@ -58,7 +58,7 @@ createApp({
                 text: newElement,
                 done: false,
             }
-            let verify;
+            let verifyNewElement;
 
             /*
             if(this.array.includes(object)){
@@ -71,23 +71,20 @@ createApp({
             */
            
             this.array.forEach(element => {
-                if(element.text === object.text){
+                if(element.text.toUpperCase() === object.text.toUpperCase()){
                     alert("Elemento gia inserito");
-                    verify = false;
+                    verifyNewElement = false;
                 }
                 else{
-                    verify = true;
+                    verifyNewElement = true;
                 }
             });
-            if(verify === true){
+            if(verifyNewElement === true){
                 this.array.push(object);
+                console.log(this.array);
                 this.element = "";
             }
             
-        },
-
-        consoleLogElement(){
-            console.log(this.message)
         },
     }
 }).mount("#app");
