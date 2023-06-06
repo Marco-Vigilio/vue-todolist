@@ -58,7 +58,11 @@ createApp({
                 text: newElement,
                 done: false,
             }
-            let verifyNewElement;
+            let verifyNewElement = true;
+
+            if(newElement === "" || newElement === null){
+                verifyNewElement = false;
+            }
 
             /*
             if(this.array.includes(object)){
@@ -72,21 +76,23 @@ createApp({
            
             this.array.forEach(element => {
                 if(element.text.toUpperCase() === object.text.toUpperCase()){
+                    console.log(element.text.toUpperCase());
+                    console.log(object.text.toUpperCase());
                     alert("Elemento gia inserito");
+                    this.element = "";
                     verifyNewElement = false;
                 }
+                /*
                 else{
                     verifyNewElement = true;
                 }
+                */
             });
 
             if(verifyNewElement === true){
                 this.array.push(object);
                 console.log(this.array);
                 this.element = "";
-            }
-            else{
-                console.log("elemento gia inserito");
             }
         },
 
@@ -98,5 +104,5 @@ createApp({
                 elementObject.done = true;
             }
         }
-    }
+    },
 }).mount("#app");

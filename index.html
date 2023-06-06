@@ -15,12 +15,15 @@
         <div class="lista">
             <ul>
                 <li v-for="(element, index) in array" v-bind:class="element.done === true ? 'toDo' : '' " @click="changeDone(element)">
-                    <p>{{element.text}}</p>
+                    {{element.text}}
                     <span @click="deleteElement(index)"><i class="fa-regular fa-circle-xmark"></i></span>
+                </li>
+                <li class="arrayEmpty" >
+                    {{message}}
                 </li>
             </ul>
         </div>
-        <div>
+        <div class="form">
             <input type="text" name="elementList" id="elementList" v-model="element" @keyup.enter="addElement(element)">
             <button @click="addElement(element)">Invia</button>
         </div>

@@ -25,6 +25,7 @@ ul{
 li{
     display: flex;
     justify-content: space-between;
+    font-size: 1.5rem;
     padding: 1rem .5rem;
     border-bottom: 2px solid gray;
     background-color: rgb(206, 255, 239);
@@ -35,10 +36,6 @@ li:hover{
     cursor: pointer;
 }
 
-.toDo{
-    text-decoration: line-through;
-}
-
 span{
     cursor: pointer;
 }
@@ -46,3 +43,28 @@ span{
 span:hover{
     color: red;
 }
+
+
+input, button{
+    height: 50px;
+    font-size: 1.2rem;
+}
+
+button{
+    margin-left: .5rem;
+    padding: .5rem;
+}
+
+.toDo{
+    text-decoration: line-through;
+}
+
+.arrayEmpty{
+    display: none;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+}
+
