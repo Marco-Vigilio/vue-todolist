@@ -14,13 +14,14 @@
         <h1>Vue To Do List</h1>
         <div class="lista">
             <ul>
-                <li v-for="(element, index) in array" v-bind:class="element.done === true ? 'toDo' : '' " @click="changeDone(element)">
+                <li v-if="array.length === 0">
+                    {{message}}
+                </li>
+                <li v-else v-for="(element, index) in array" v-bind:class="element.done === true ? 'toDo' : '' " @click="changeDone(element)">
                     {{element.text}}
                     <span @click="deleteElement(index)"><i class="fa-regular fa-circle-xmark"></i></span>
                 </li>
-                <li class="arrayEmpty" >
-                    {{message}}
-                </li>
+                
             </ul>
         </div>
         <div class="form">

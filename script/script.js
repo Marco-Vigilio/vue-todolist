@@ -44,7 +44,7 @@ createApp({
                 }, 
             ],
             array1: [],
-            message: "Non ci sono elementi",
+            message: "Inserisci una task da fare",
             element: "",
         }
     },
@@ -106,3 +106,5 @@ createApp({
         }
     },
 }).mount("#app");
+
+console.log(this.array1);
