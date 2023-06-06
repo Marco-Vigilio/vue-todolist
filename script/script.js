@@ -79,12 +79,24 @@ createApp({
                     verifyNewElement = true;
                 }
             });
+
             if(verifyNewElement === true){
                 this.array.push(object);
                 console.log(this.array);
                 this.element = "";
             }
-            
+            else{
+                console.log("elemento gia inserito");
+            }
         },
+
+        changeDone(elementObject){
+            if(elementObject.done === true){
+                elementObject.done = false;
+            }
+            else if(elementObject.done === false){
+                elementObject.done = true;
+            }
+        }
     }
 }).mount("#app");

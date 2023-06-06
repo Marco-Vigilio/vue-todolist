@@ -30,10 +30,19 @@ li{
     background-color: rgb(206, 255, 239);
 }
 
+li:hover{
+    background-color: rgb(139, 255, 216);;
+    cursor: pointer;
+}
+
 .toDo{
     text-decoration: line-through;
 }
 
 span{
     cursor: pointer;
+}
+
+span:hover{
+    color: red;
 }
