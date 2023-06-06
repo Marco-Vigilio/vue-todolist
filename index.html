@@ -21,7 +21,7 @@
             </ul>
         </div>
         <div>
-            <input type="text" name="elementList" id="elementList" v-model="element">
+            <input type="text" name="elementList" id="elementList" v-model="element" @keyup.enter="addElement(element)">
             <button @click="addElement(element)">Invia</button>
         </div>
     </main>

@@ -45,6 +45,7 @@ createApp({
             ],
             array1: [],
             message: "Non ci sono elementi",
+            element: "",
         }
     },
     methods:{
@@ -63,6 +64,7 @@ createApp({
             else{
                 this.array.push(object);
                 console.log(this.array);
+                this.element = "";
             }
             
             
