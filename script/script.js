@@ -58,16 +58,22 @@ createApp({
                 text: newElement,
                 done: false,
             }
-            if(this.array.includes(object)){
-                console.log("Elemento gia inserito");
-            }
-            else{
+            let verify;
+            this.array.forEach(element => {
+                if(element.text === object.text){
+                    console.log("Elemento gia inserito");
+                    verify = false;
+                }
+                else{
+                    console.log("Nuovo elemento");
+                    verify = true;
+                }
+            });
+            if(verify === true){
                 this.array.push(object);
-                console.log(this.array);
-                this.element = "";
+                    console.log(this.array);
+                    this.element = "";
             }
-            
-            
         },
 
         consoleLogElement(){
