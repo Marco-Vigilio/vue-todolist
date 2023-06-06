@@ -59,8 +59,8 @@ button{
     text-decoration: line-through;
 }
 
-.arrayFull{
-    display: none;
+.arrayEmpty{
+    justify-content: center;
 }
 
 .form{
